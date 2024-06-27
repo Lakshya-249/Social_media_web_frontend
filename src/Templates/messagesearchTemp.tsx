@@ -13,7 +13,7 @@ function MessagesearchTemp() {
   const [show, setshow] = useState<boolean>(true);
 
   return (
-    <div className="w-[25%] flex flex-col text-left h-full border-gray-500 border-r-[0.15px]">
+    <div className="w-[25%] max-sm:hidden flex flex-col text-left h-full border-gray-500 border-r-[0.15px]">
       <div className="p-5 flex justify-between items-center pb-5 border-b-[0.15px] border-gray-500">
         <p className="text-xl font-bold">Chats</p>
         <FontAwesomeIcon

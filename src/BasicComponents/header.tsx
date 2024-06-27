@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header() {
   return (
     <div className="bg-inherit flex justify-between items-center border-b-[0.15px] border-gray-500 font-sans text-sm w-full h-[4rem]">
-      <div className="text-3xl font-bold font-[Forte]">Chatapp</div>
-      <div className="px-5 p-3 flex items-center rounded-full bg-[#353636] hover:cursor-pointer hover:bg-[#3f3d3d] space-x-3">
+      <div className="text-3xl font-bold font-serif">Chatapp</div>
+      <div className="px-5 p-3 flex items-center rounded-full bg-[#1a2228] hover:cursor-pointer hover:bg-[#3f3d3d] space-x-3">
         <FontAwesomeIcon icon={faSearch} color="white" />
         <input
           type="text"
