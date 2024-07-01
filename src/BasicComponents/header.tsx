@@ -1,8 +1,15 @@
 import { faCommentDots } from "@fortawesome/free-regular-svg-icons";
 import { faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  const handlemessage = () => {
+    const win = window.matchMedia("(max-width: 640px)");
+    if (win.matches) navigate("/message/search");
+    else navigate("/message");
+  };
   return (
     <div className="bg-inherit flex justify-between items-center border-b-[0.15px] border-gray-500 font-sans text-sm w-full h-[4rem]">
       <div className="text-3xl font-bold font-serif">Chatapp</div>
@@ -16,7 +23,11 @@ function Header() {
       </div>
       <div className="flex items-center space-x-4 ">
         <div className="p-3 rounded-full hover:bg-[#3f3d3d]">
-          <FontAwesomeIcon icon={faCommentDots} size="xl" />
+          <FontAwesomeIcon
+            onClick={handlemessage}
+            icon={faCommentDots}
+            size="xl"
+          />
         </div>
         <div className="flex items-center font-semibold p-3 rounded-full hover:bg-[#3f3d3d] space-x-2">
           <FontAwesomeIcon icon={faPlus} size="xl" />

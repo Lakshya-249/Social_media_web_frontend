@@ -5,6 +5,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout1 from "./layouts/layout1.tsx";
 import Layout2 from "./layouts/layout2.tsx";
 import Creategroupchannel from "./Templates/creategroupchannel.tsx";
+import MessageSend from "./Templates/messageSend.tsx";
+import MessagesearchTemp from "./Templates/messagesearchTemp.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
           {
             path: "createroom",
             element: <Creategroupchannel />,
+          },
+          {
+            path: "send",
+            element: <MessageSend />,
+          },
+          {
+            path: "search",
+            element: <MessagesearchTemp />,
           },
         ],
       },
